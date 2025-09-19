@@ -1,0 +1,279 @@
+.main {
+  padding: 2rem;
+  background: #eaf9e7;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #013237;
+}
+
+.subtitle {
+  color: #4ca771;
+  margin-bottom: 1.5rem;
+}
+
+/* Search */
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0 2rem 0;
+  max-width: 500px;
+  background: #fff;
+  border: 1px solid #c0e6ba;
+  border-radius: 6px;
+  padding: 0.3rem 0.7rem;
+}
+
+.searchBox input {
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 42px;
+  background: #fff;
+  font-size: 0.95rem;
+  color: #013237;
+}
+
+.searchBox input::placeholder {
+  color: #888;
+}
+
+.searchBox button {
+  background: #4ca771;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.searchIcon {
+  color: #013237; /* ✅ ไอคอนชัดขึ้น */
+  margin-right: 0.4rem;
+}
+
+/* Form */
+.form {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+  color: #013237;
+}
+
+.field input,
+.field select {
+  padding: 0.5rem;
+  border: 1px solid #c0e6ba;
+  border-radius: 6px;
+  background: #fff;
+  outline: none;
+  height: 42px;
+  font-size: 0.95rem;
+  color: #013237;
+  width: 100%;
+}
+
+/* Autofill fix */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  -webkit-text-fill-color: #013237 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Calendar icon force black */
+.dateInput::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+/* Radio group */
+.radioGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.radioOption {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.95rem;
+  color: #013237;
+}
+
+.otherInput {
+  margin-left: 0.5rem;
+  width: 160px;
+  padding: 0.4rem;
+  border: 1px solid #c0e6ba;
+  border-radius: 6px;
+  height: 42px;
+  font-size: 0.95rem;
+  visibility: hidden;
+}
+
+/* Actions */
+.actions {
+  margin-top: 1rem;
+}
+
+.actions button {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  background: #4ca771;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.actions button:hover {
+  background: #388e5c;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  border: 1px solid #e0e0e0;
+  padding: 0.7rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.table th {
+  background: #c0e6ba;
+  font-weight: bold;
+  color: #013237;
+}
+
+.table td {
+  color: #013237;
+}
+
+.table td button {
+  padding: 0.4rem 0.9rem;
+  border: none;
+  border-radius: 6px;
+  background: #4ca771;
+  color: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.table td button:hover {
+  background: #388e5c;
+}
+
+/* Popup Modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.modal h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #013237;
+}
+
+.modal p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #013237;
+}
+
+.modalActions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8rem;
+}
+
+.closeBtn {
+  background: #ccc;
+  color: #013237;
+}
+
+.closeBtn:hover {
+  background: #b5b5b5;
+}
+
+.exportBtn {
+  background: #4ca771;
+  color: #fff;
+}
+
+.exportBtn:hover {
+  background: #388e5c;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.errorText {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}

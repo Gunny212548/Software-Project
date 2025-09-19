@@ -1,0 +1,20 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+  background: #eaf9e7;
+  transition: margin-left 0.25s ease;
+}
+
+/* align content ตาม sidebar */
+.contentOpen {
+  margin-left: 220px; /* match sidebar เปิด */
+}
+
+.contentClosed {
+  margin-left: 49px; /* match sidebar ปิด */
+}
